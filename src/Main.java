@@ -2,17 +2,17 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Введите первое число: ");
+        System.out.println("Р’РІРµРґРёС‚Рµ РїРµСЂРІРѕРµ С‡РёСЃР»Рѕ: ");
         int first_number = new Scanner(System.in).nextInt();
-        System.out.println("Введите второе число: ");
+        System.out.println("Р’РІРµРґРёС‚Рµ РІС‚РѕСЂРѕРµ С‡РёСЃР»Рѕ: ");
         int second_number = new Scanner(System.in).nextInt();
         int sum = first_number + second_number;
         int difference = first_number - second_number;
         int multiplication = first_number * second_number;
         double division = (double) first_number / second_number;
-        System.out.println("Сумма: " + sum);
-        System.out.println("Разность: " + difference);
-        System.out.println("Произведение: " + multiplication);
-        System.out.println("Частное: " + division);
+        System.out.println("РЎСѓРјРјР°: " + sum);
+        System.out.println("Р Р°Р·РЅРѕСЃС‚СЊ: " + difference);
+        System.out.println("РџСЂРѕРёР·РІРµРґРµРЅРёРµ: " + multiplication);
+        System.out.println("Р§Р°СЃС‚РЅРѕРµ: " + division);
     }
 }
