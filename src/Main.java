@@ -1,18 +1,25 @@
+import java.io.File;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Р’РІРµРґРёС‚Рµ РїРµСЂРІРѕРµ С‡РёСЃР»Рѕ: ");
-        int first_number = new Scanner(System.in).nextInt();
-        System.out.println("Р’РІРµРґРёС‚Рµ РІС‚РѕСЂРѕРµ С‡РёСЃР»Рѕ: ");
-        int second_number = new Scanner(System.in).nextInt();
-        int sum = first_number + second_number;
-        int difference = first_number - second_number;
-        int multiplication = first_number * second_number;
-        double division = (double) first_number / second_number;
-        System.out.println("РЎСѓРјРјР°: " + sum);
-        System.out.println("Р Р°Р·РЅРѕСЃС‚СЊ: " + difference);
-        System.out.println("РџСЂРѕРёР·РІРµРґРµРЅРёРµ: " + multiplication);
-        System.out.println("Р§Р°СЃС‚РЅРѕРµ: " + division);
+        boolean fileExists;
+        boolean isDirectory;
+        int countOfRightFilePath = 0;
+        while(true) {
+            String path = new Scanner(System.in).nextLine();
+            File file = new File(path);
+            fileExists = file.exists();
+            isDirectory = file.isDirectory();
+            if (!fileExists) {
+                System.out.println("Файла не существует!");
+            } else if (isDirectory) {
+                System.out.println("Путь ведёт к директории!");
+            } else {
+                System.out.println("Путь указан верно");
+                countOfRightFilePath++;
+                System.out.println("Это файл номер " + countOfRightFilePath);
+            }
+        }
     }
 }
